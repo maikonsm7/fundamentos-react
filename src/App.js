@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import Saudacao from './components/Saudacao';
+import Estado from './components/Estado';
+import Pai from './components/Pai';
+import Evento from './components/Evento';
+import MousePosition from './components/MousePosition';
+import Logo from './assets/logo.png'
+import Contador from './components/Contator';
+import Lista from './components/Lista';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div>
+            <Saudacao nome="Lucas" />
+            <Estado />
+            <Pai nome="João" sobrenome="Silva" />
+            <Evento />
+            <MousePosition/>
+
+            {/* Imagem em public */}
+            <img src='/logo192.png' alt='logo'/>
+
+            {/* Imagem em src */}
+            <img src={Logo} alt='logo2'/>
+
+            <Contador/>
+            <Lista/>
+        </div>
+    )
 }
 
-export default App;
+export default App
